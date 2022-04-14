@@ -1,22 +1,44 @@
+:root {
+    --border-radius: 10px;
+    --color-light: hsla(0, 0%, 95%, 0.492);
+    --color-norm: hsl(0, 81%, 78%);
+
+}
+
 table {
+    --border-radius: 10px;
+    --color-light: hsla(0, 0%, 95%, 0.492);
+    --color-norm: hsl(0, 81%, 78%);
+    margin: 0 auto;
     min-width: 200px;
     width: 100%;
-    max-width: 600px;
-    border: 3px solid rgb(247, 0, 0);
-    margin: 0 auto;
-    border-collapse: separate;
+    max-width: 900px;
+    border: 3px solid;
+    border-collapse: collapse;
     border-radius: 10px;
 }
 
-caption {
-    /* caption-side: bottom; */
-    text-align: left;
+
+thead th:first-child {
+    border-top-left-radius: var(--border-radius);
+
+}
+
+tfoot th:first-child {
+    border-top-right-radius: var(--border-radius);
+}
+
+thead th:first-child {
+    border-bottom-left-radius: var(--border-radius);
+
+}
+
+tfoot th:first-child {
+    border-bottom-right-radius: var(--border-radius);
 }
 
 
-td,
-th {
-    border: 1px solid black;
-    background-color: azure;
-    box-sizing: border-box;
+
+tbody tr:nth-child(odd) td:nth-child(even) {
+    background-color: var(--color-norm);
 }
